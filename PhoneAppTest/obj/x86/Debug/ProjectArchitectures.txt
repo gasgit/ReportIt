@@ -1,0 +1,1 @@
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\ReportIt.csproj;x86

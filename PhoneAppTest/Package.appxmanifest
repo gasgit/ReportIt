@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="016e92be-f1ea-46f0-94b8-677d0df5535b" Publisher="CN=Glen" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="016e92be-f1ea-46f0-94b8-677d0df5535b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>PhoneAppTest</DisplayName>
+    <PublisherDisplayName>Glen</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PhoneAppTest.App">
+      <m3:VisualElements DisplayName="PhoneAppTest" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="PhoneAppTest" ForegroundText="light" BackgroundColor="transparent">
+        <m3:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+        </m3:DefaultTile>
+      </m3:VisualElements>
+      <Extensions>
+        <Extension Category="windows.fileOpenPicker">
+          <FileOpenPicker>
+            <SupportedFileTypes>
+              <FileType>.jpg</FileType>
+              <FileType>.png</FileType>
+              <FileType>.bmp</FileType>
+              <FileType>.jpeg</FileType>
+            </SupportedFileTypes>
+          </FileOpenPicker>
+        </Extension>
+        <Extension Category="windows.shareTarget">
+          <ShareTarget m2:Description="sendEmail">
+            <SupportedFileTypes>
+              <SupportsAnyFileType />
+            </SupportedFileTypes>
+          </ShareTarget>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <Capability Name="picturesLibrary" />
+    <Capability Name="removableStorage" />
+    <DeviceCapability Name="location" />
+    <DeviceCapability Name="proximity" />
+    <DeviceCapability Name="webcam" />
+  </Capabilities>
+</Package>

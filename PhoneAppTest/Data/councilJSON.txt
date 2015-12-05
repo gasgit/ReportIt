@@ -1,0 +1,119 @@
+
+ [
+{
+"name": "Carlow County Council",
+"address": "County Offices,Athy Rd,Carlow",	
+"phone": "+353 59 9170300",
+"fax": "+353 59 9141503", 	
+"email": "secretar@carlowcoco.ie"
+},
+{
+
+"name": "Cavan County Council",
+"address": "Courthouse, Cavan", 	
+"phone": "+353 49 4331799",
+"fax": "+353 49 4361565",	
+"email": "secretar@cavancoco.ie"
+},
+{
+
+
+"name": "Clare County Council",
+"address": "New Rd, Ennis,Co. Clare",
+"phone": "+ 353 65 6821616",
+"fax": "+353 65 6828233", 	
+"email": "secretar@clarecoco.ie"
+},
+{
+
+"name": "Cork County Council",
+"address": "County Hall,Cork",
+"phone": "+353 21 4276891",
+"fax": "+353 21 4276321",
+"email": "corporate.affairs@corkcoco.ie"
+},
+{
+
+"name": "Donegal County Council",
+"address": "County House,Liffor, Co. Donegal",	
+"phone": "+353 74 9172222",
+"fax": "+353 74 9141205",
+"email":"secretar@donegalcoco.ie"
+},
+{
+
+
+"name":"Dun Laoghaire / Rathdown",
+"address": "Town Hall, Marine Rd, Dun Laoghaire",
+"phone": "+353 1 2054700",
+"fax": "+353 1 2806969", 	
+"email": "secretar@dlrcoco.ie"
+},
+{
+
+
+"name": "Fingal County Council",
+"address":"Main St,Swords, Co. Dublin", 	
+"phone": "+353 1 8905000",
+"fax": "+353 1 8725782",
+"email":"secretar@fingalcoco.ie"
+},
+{
+
+"name": "Galway County Council",
+"address": "County Hall,Prospect Hill, Galway",
+"phone": "+353 91 509000",
+"fax": "+353 91 509010",
+"email":  "secretar@galwaycoco.ie"
+},
+{
+
+"name": "Kerry County Council",
+"address": "Aras an Chontae, Tralee, Co. Kerry",
+"phone": "+353 66 7121111",
+"fax": "+353 66 7122466",
+"email":"secretar@kerrycoco.ie"
+},
+{
+
+"name": "Kildare County Council",
+"address": "Áras Chill Dara, Devoy Park,Naas,Co. Kildare",
+"phone": "+353 45 980200",
+"fax": "+353 45 876875",
+"email":"secretar@kildarecoco.ie"
+},
+{
+
+"name": "Kilkenny County Council",
+"address": "County Hall, John St, Kilkenny",
+"phone": "+353 56 7721076",
+"fax": "+353 56 7794004",
+"email": 	"secretar@kilkennycoco.ie"
+},
+{
+
+"name": "Laois County Council",
+"address": "Áras an Chontae, Portlaoise, Co.Laois, Ireland",
+"phone": "+353 57 8664000  ",
+"fax": "353 57 8622313",
+"email": 	"secretar@laoiscoco.ie"
+},
+{
+
+"name": "Leitrim County Council",
+"address": "Áras an Chontae, Carrick on Shannon, Co. Leitrim",
+"phone": "071 9620005",
+"fax": " 071 9621982",
+"email": "customerservice@leitrimcoco.ie"
+},
+{
+
+"name": "Longford County Council",
+"address": "Great Water St, Longford N39 NH56",
+"phone": "043-3343300",
+"fax": " 043-3341233",
+"email": "info@longfordcoco.ie"
+}
+]
+
+

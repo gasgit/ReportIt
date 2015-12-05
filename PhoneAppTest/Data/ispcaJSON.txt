@@ -1,0 +1,171 @@
+﻿ [
+{
+"name": "ISPCA National Animal Cruelty Helpline",
+"address": " ",	
+"phone": "1890 515515",
+"fax": "0000", 	
+"email": "www.ispca.ie/ "
+},
+{
+"name": "ISPCA National Animal Centre",
+"address": "Derryglogher Lodge,Keenagh,Co.Longford,Ireland",	
+"phone": ": 043 33 25035",
+"fax": "043 33 25024", 	
+"email": " info@ispca.ie"
+},
+{
+"name": "ISPCA Equine Rescue Centre",
+"address": "Dromsligo,Mallow, Co Cork, P51 YF98",	
+"phone": " 022 43218",
+"fax": " 022 43219", 	
+"email": "mallow@ispca.ie"
+},
+{
+"name": "Cat and Dog Protection Association",
+"address": "Carmichael House, North Brunswick Street, Dublin 7 ",	
+"phone": "01-8880828",
+"fax": "0000", 	
+"email": "www.cdpa.ie"
+},
+{
+"name": "Cavan SPCA",
+"address": "Drumaharrid, Ballyhaise Co. Cavan ",	
+"phone": "086 8916186",
+"fax": "0000", 	
+"email": "www.cavanspca.ie "
+},
+{
+"name": "Clare SPCA",
+"address": " ",	
+"phone": "061 368089",
+"fax": "0000", 	
+"email": "clarespca@hotmail.com"
+},
+{
+"name": "Donegal SPCA",
+"address": "P.O Box 115, Letterkenny, Co. Donegal",	
+"phone": "086 6054943",
+"fax": "0000", 	
+"email": "www.donegalspca.ie"
+},
+{
+"name": "North County Dublin SPCA",
+"address": "Veterinary Clinic: 124A Upper Drumcondra Road, Dublin 9",	
+"phone": " 01 8375630",
+"fax": "0000", 	
+"email": "ncdspca@eircom.net"
+},
+{
+"name":"Kildare and West Wicklow SPCA",
+"address": " ",	
+"phone": " 087 6887136",
+"fax": "0000", 	
+"email": "www.kwwspca.ie"
+},
+{
+"name": "Kilkenny SPCA",
+"address": "Norebank Lodge Greenshill Kilkenny  ",	
+"phone": "056 7771635",
+"fax": "0000", 	
+"email": " info@kilkennyspca.ie"
+},
+{
+"name": "Laois SPCA",
+"address": " ",	
+"phone": "087 6883333",
+"fax": "0000", 	
+"email": "www.lspca.ie"
+},
+{
+"name": "Leitrim SPCA",
+"address": " ",	
+"phone": "071 9646912",
+"fax": "0000", 	
+"email": "mariehealylspca@eircom.net"
+},
+{
+"name": "Laois SPCA",
+"address": " ",	
+"phone": "087 6883333",
+"fax": "0000", 	
+"email": "www.lspca.ie"
+},
+{
+"name": "Limerick Animal Welfare Ltd",
+"address": "Parnell Street, Limerick Parnell Street, Limerick ",	
+"phone": "061-336740",
+"fax": "0000", 	
+"email": "www.limerickanimalwelfare.ie"
+},
+{
+"name": "Limerick SPCA",
+"address": "289, Fr Russell Square, Hyde Road, Limerick",	
+"phone": "061 415618",
+"fax": "0000", 	
+"email": "limerickspca@gmail.com"
+},
+{
+"name": "Longford SPCA",
+"address": "Longford SPCA, Market Square, Longford ",	
+"phone": "043 33 47417 ",
+"fax": "0000", 	
+"email": "www.Longford-SPCA.org "
+},
+{
+"name": "Louth SPCA",
+"address": " ",	
+"phone": "042 933 5045 ",
+"fax": "0000", 	
+"email": "www.louthspca.ie"
+},
+{
+"name": "Mayo SPCA Ltd",
+"address": "Pattens Park, Ballyhaunis, Co. Mayo ",	
+"phone": "086 803 2592",
+"fax": "0000", 	
+"email": "themayospca@outlook.com"
+},
+{
+"name": "Offaly SPCA",
+"address": "Market Place, Tullamore, Co. Offaly",	
+"phone": "086 8262986",
+"fax": "0000", 	
+"email": "www.offalyspca.com"
+},
+{
+"name": "Roscommon SPCA",
+"address": " ",	
+"phone": "087 0505594",
+"fax": "0000", 	
+"email": "spca@roscommonspca.ie"
+},
+{
+"name": "Waterford SPCA Ltd",
+"address": "Summerland Square, Upper Yellow Road, Waterford. ",	
+"phone": "051-841432",
+"fax": "0000", 	
+"email": "www.waterfordspca.ie"
+},
+{
+"name": "Tipperary Friends of Animals SPCA",
+"address": "Charity Shop: 1 Friary Court, Friars Street, Neenagh, Co Tipperary",	
+"phone": "086 8163707",
+"fax": "0000", 	
+"email": "tipperaryfoaspca@eircom.net"
+},
+{
+"name": "Westmeath SPCA",
+"address": " ",	
+"phone": "086 6383730 ",
+"fax": "0000", 	
+"email": "www.ispca.ie "
+},
+{
+"name": "Wexford SPCA",
+"address": "Wexford SPCA, The Veterinary Centre, Distillery Road, Wexford",	
+"phone": "053 9143919",
+"fax": "0000", 	
+"email": "wexford_spca@eircom.net"
+}
+
+]
