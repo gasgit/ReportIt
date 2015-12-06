@@ -9,11 +9,15 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 
-    <!--<Page.Resources>
-        <DataTemplate  >
+    <Page.Resources>
+        <DataTemplate x:Key="myRep">
+        <StackPanel  >
             
+            
+        </StackPanel>
         </DataTemplate>
-    </Page.Resources>-->
+
+    </Page.Resources>
     <Grid x:Name="LayoutRoot">
 
         <Grid.ChildrenTransitions>
@@ -35,16 +39,19 @@
 
         <!--TODO: Content should be placed within the following grid-->
 
-        
-            <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-           
-                <StackPanel >
 
+       
+             
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0" >
 
-                <ListView x:Name="lvReports"  HorizontalAlignment="Left" Height="481" Margin="10,10,0,0" VerticalAlignment="Top" Width="342" FontSize="16" Holding="lvReports_Holding" Tapped="lvReports_Tapped"  />
-               
-            </StackPanel>
+            
+
+            <ListView DataContext="myRep" x:Name="lvReports"  HorizontalAlignment="Left" Height="481" Margin="10,10,0,0" VerticalAlignment="Top" Width="342" FontSize="16" Tapped="lvReports_Tapped"  Holding="lvReports_Holding" ></ListView>
           
+
+
+
+
 
         </Grid>
        

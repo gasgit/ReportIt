@@ -119,6 +119,8 @@ namespace PhoneAppTest
 
         #region fill list from db and pass selected to singleReport page
 
+        
+
 
 
         private async void retrieveData()
@@ -132,6 +134,8 @@ namespace PhoneAppTest
             {
                 myReportsList.Add(row);
             }
+
+
 
           
             foreach(var item in myReportsList)
@@ -196,50 +200,61 @@ namespace PhoneAppTest
 
 
 
+
+
+
         private async void lvReports_Holding(object sender, HoldingRoutedEventArgs e)
         {
 
 
-            //FrameworkElement element = (FrameworkElement)e.OriginalSource;
-            //if (element.DataContext != null && element.DataContext is StackPanel)
-            //{
-            //    StackPanel selectedOne = (StackPanel)element.DataContext;
-            //    // rest of the code
-            //}
+            FrameworkElement element = (FrameworkElement)e.OriginalSource;
+            if (element.DataContext != null && element.DataContext is StackPanel)
+            {
+                //ListViewItem selectedOne = ()element.DataContext;
+
+                MessageDialog dialog = new MessageDialog("Are you sure you want to delete "  );
+                await dialog.ShowAsync();
+                // rest of the code
+            }
+
+
             lvReports.Visibility = Visibility.Collapsed;
 
-            // ListView myLv = (ListView)sender;
-            Report myobject = (sender as ListView).SelectedItem as Report;
 
 
 
-
-
-            SQLiteAsyncConnection connection = new SQLiteAsyncConnection("ReportIt.db");
 
            
 
-            MessageDialog dialog = new MessageDialog("Are you sure you want to delete " );
+            // ListViewItem lv = (ListViewItem)sender;
 
-            dialog.Commands.Add(new UICommand("Yes") { Id = 0 });
-            dialog.Commands.Add(new UICommand("No") { Id = 1 });
 
-           
-           
-              
-            switch (dialog.DefaultCommandIndex)
-            {
-                case 0:
-                    deleteReport(found);
 
-                    break;
-                case 1:
+            // SQLiteAsyncConnection connection = new SQLiteAsyncConnection("ReportIt.db");
 
-                    break;
-                default:
-                    break;
 
-            }
+
+            // MessageDialog dialog = new MessageDialog("Are you sure you want to delete " + lvReports);
+
+            //dialog.Commands.Add(new UICommand("Yes") { Id = 0 });
+            //dialog.Commands.Add(new UICommand("No") { Id = 1 });
+
+
+
+
+            //switch (dialog.DefaultCommandIndex)
+            //{
+            //    case 0:
+            //        //deleteReport(found);
+
+            //        break;
+            //    case 1:
+
+            //        break;
+            //    default:
+            //        break;
+
+            //}
 
 
 
@@ -252,7 +267,7 @@ namespace PhoneAppTest
             //dialog.DefaultCommandIndex = 0;
             //dialog.CancelCommandIndex = 1;
 
-            await  dialog.ShowAsync();
+
             //return;
 
             //var btn = sender as Button;
@@ -266,8 +281,9 @@ namespace PhoneAppTest
 
         }
 
-       
+        
+        }
     }
 
     #endregion
-}
+

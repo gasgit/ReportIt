@@ -6,6 +6,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="BottomAppBar" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
@@ -101,15 +102,19 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="PhoneAppTest.Map" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="DataContext" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
-      <RootEvent Name="Holding" />
       <RootEvent Name="Tapped" />
+      <RootEvent Name="Holding" />
     </RootType>
     <RootType FullName="PhoneAppTest.myReports" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
