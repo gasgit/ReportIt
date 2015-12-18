@@ -11,6 +11,7 @@ using Windows.Devices.Geolocation;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
+using Windows.System;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -42,11 +43,14 @@ namespace PhoneAppTest
         string ImagePath;
         Windows.Media.Capture.MediaCapture captureManager;
         public BitmapImage bitmapImage = new BitmapImage();
+
+        // from filepicer 
         public StorageFile storageFile;
 
         Report sendReportObj = new Report();
 
         public DateTime myDate = DateTime.Now;
+        private Geolocator geo;
 
 
 
@@ -83,10 +87,6 @@ namespace PhoneAppTest
             // Register the current page as a share source.
             DataTransferManager.GetForCurrentView().DataRequested += OnShareDataRequested;
 
-
-            
-
-
             base.OnNavigatedTo(e);
         }
 
@@ -98,7 +98,7 @@ namespace PhoneAppTest
             DataTransferManager.GetForCurrentView().DataRequested += OnShareDataRequested;
             base.OnNavigatedFrom(e);
 
-            // sets the cache to disabled when i want to nav from(back to main menu in this case so that when user 
+            // sets the cache to disabled when i want to nav from back to main menu in this case so that when user 
             // make choices again the form is new)
             if (e.NavigationMode == NavigationMode.Back)
                 NavigationCacheMode = NavigationCacheMode.Disabled;
@@ -298,10 +298,7 @@ namespace PhoneAppTest
 
 
 
-        /*****************    TODO  **************************
-         i need to change this to an event from the comboBox
-
-         *****************    TODO  **************************/
+       
         private void displayEmail()
         {
 
@@ -379,6 +376,13 @@ namespace PhoneAppTest
 
         }
 
+        async Task CapturePhoto()
+        {
+
+           // CameraCaptureUI camera = new CameraCaptureUI();
+
+        }
+
         #endregion read json create list of organisations get email etc
 
 
@@ -392,10 +396,10 @@ namespace PhoneAppTest
             {
 
                 // Geolocator is in the Windows.Devices.Geolocation namespace
-                Geolocator geo = new Geolocator();
-             //   geo.DesiredAccuracyInMeters = 10;
+                geo = new Geolocator();
+                 //   geo.DesiredAccuracyInMeters = 10;
                 geo.DesiredAccuracy = PositionAccuracy.High;
-
+                
 
 
 
@@ -417,6 +421,10 @@ namespace PhoneAppTest
                     // the application does not have the right capability or the location master switch is off
                     MessageDialog msgLocation = new MessageDialog("Location is disabled in phone settings.");
                     await msgLocation.ShowAsync();
+                    await Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));
+                    
+                    
+
                 }
                 else
                 {

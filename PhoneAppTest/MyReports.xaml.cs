@@ -140,7 +140,7 @@ namespace PhoneAppTest
           
             foreach(var item in myReportsList)
             {
-                lvReports.Items.Add("Id: " + item.uid + "\nOrganisation: " + item.name + 
+                lvReports.Items.Add("Id: " + item.uid + "\nSent To: " + item.name + 
                                     "\nLatitude: " + item.lat + "\nLongitude: " + item.lng + 
                                     "\nMessage: " + item.message +  "\nPhoto: " + item.photo_id + 
                                     "\nEmail: " + item.organisation_email +  "\nPhone: " + item.organisation_email +  "\nDate: " + item.date);
@@ -149,7 +149,7 @@ namespace PhoneAppTest
         }
 
     
-        private void lvReports_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        private void lvReports_Tapped(object sender, TappedRoutedEventArgs e)
         {
 
 

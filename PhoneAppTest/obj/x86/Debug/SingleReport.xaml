@@ -30,10 +30,11 @@
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
             <ScrollViewer >
-                <StackPanel Width="373">
-                    <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Id" Margin="5,5,88,5" FontSize="16" FontWeight="Bold"/>
+                <StackPanel Width="353">
+                    <Image x:Name="sgImage" Height="177" Margin="0,0,5.333,0"/>
+                    <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Id" Margin="5,5,0,5" FontSize="16" FontWeight="Bold" Padding="0,5,0,0" HorizontalAlignment="Left" Width="73"/>
                     <TextBlock x:Name="txtId" TextWrapping="Wrap" Text="" Margin="5" FontSize="16"/>
-                    <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Name" Margin="5,5,88,5" FontSize="16" FontWeight="Bold"/>
+                    <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Sent To" Margin="5,5,88,5" FontSize="16" FontWeight="Bold"/>
                     <TextBlock x:Name="txtName" TextWrapping="Wrap" Text="" Margin="5" FontSize="16"/>
                     <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Lat" Margin="5,5,88,5" FontSize="16" FontWeight="Bold"/>
                     <TextBlock x:Name="txtLat" TextWrapping="Wrap" Text="" Margin="5" FontSize="16"/>
@@ -51,9 +52,19 @@
                     <TextBlock x:Name="txtDate" TextWrapping="Wrap" Text="" Margin="5" FontSize="16"/>
                 </StackPanel>
             </ScrollViewer>
-            <Image x:Name="sgImage" Height="100" Margin="180,-119,0,0" VerticalAlignment="Top" d:LayoutOverrides="LeftPosition, RightPosition"/>
 
         </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" Opacity="0.5">
+            <AppBarButton x:ConnectionId='1' x:Name="btnMap" Label="Map" Icon="Target"                       />
+
+
+            <AppBarButton x:ConnectionId='2' x:Name="btnResend" Label="Resend" Icon="Target"                          />
+
+            <AppBarButton x:ConnectionId='3' x:Name="btnDelete" Label="Delete" Icon="Target"                          />
+        </CommandBar>
+    </Page.BottomAppBar>
+
 </Page>
 

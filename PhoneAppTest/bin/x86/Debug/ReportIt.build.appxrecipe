@@ -61,9 +61,14 @@
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\pin.png">
+      <PackagePath>Assets\pin.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\pin32.png">
+      <PackagePath>Assets\pin32.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
@@ -76,6 +81,10 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\SplashScreenImage.png">
       <PackagePath>Assets\SplashScreenImage.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\Square44x44Logo.scale-240.png">
+      <PackagePath>Assets\Square44x44Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>

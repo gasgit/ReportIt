@@ -1,5 +1,11 @@
 ﻿using PhoneAppTest.Common;
+using SQLite;
 using System;
+using System.Collections.Generic;
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
@@ -17,6 +23,16 @@ namespace PhoneAppTest
         
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        // set variable for uid to delete at class level
+        private int idToDelete;
+
+        private Report data;
+
+        public StorageFile storageFile;
+
+        private BitmapImage bitmap;
+
+        private StorageFile stFile;
 
         public SingleReport()
         {
@@ -25,6 +41,34 @@ namespace PhoneAppTest
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+            // Register the current page as a share source.
+            DataTransferManager.GetForCurrentView().DataRequested += OnShareDataRequested;
+        }
+
+        private  void OnShareDataRequested(DataTransferManager sender, DataRequestedEventArgs args)
+        {
+            // gets the global state for subject declared in App.cs and set in button click mainpage.cs
+            // var obj = App.Current as App;
+            // args.Request.Data.Properties.Title = obj.subject;
+
+            args.Request.Data.Properties.Title = data.name.ToString();
+            args.Request.Data.SetText("Date:" + txtDate.Text + "\nLatitude: " + data.lat + "\nLongitude: " + data.lng + "\nMessage: " + txtMessage.Text +
+                "\nGoogle Maps: " + "http://maps.google.com/maps?q=" + data.lat + "+" + data.lng + "\n" +
+                "\nOpenStreetMaps: " + "http://www.openstreetmap.org/?mlat=" + data.lat + "&mlon=" + data.lng + "&zoom=16");
+
+
+
+           var imageStreamRef = RandomAccessStreamReference.CreateFromUri(new Uri(data.photo_id));
+           
+
+
+            args.Request.Data.Properties.Thumbnail = imageStreamRef;
+
+
+
+            args.Request.Data.SetBitmap(imageStreamRef);
+
+
         }
 
         /// <summary>
@@ -89,7 +133,10 @@ namespace PhoneAppTest
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // passed  object fron myReports from selection on myReportsList
-            Report data = e.Parameter as Report;
+            data = e.Parameter as Report;
+
+            idToDelete = data.uid;
+
             txtId.Text = data.uid.ToString();
             txtName.Text = data.name.ToString();
             txtLat.Text = data.lat.ToString();
@@ -102,7 +149,7 @@ namespace PhoneAppTest
 
             txtDate.Text = data.date.ToString();
 
-            var bitmap = new BitmapImage(new Uri(data.photo_id.ToString()));
+            bitmap = new BitmapImage(new Uri(data.photo_id));
 
             sgImage.Source = bitmap;
 
@@ -115,5 +162,60 @@ namespace PhoneAppTest
         }
 
         #endregion
+
+        private async void deleteReport(int uid)
+        {
+
+            SQLiteAsyncConnection connection = new SQLiteAsyncConnection("ReportIt.db");
+
+            var Report = await connection.Table<Report>().Where(x => x.uid.Equals(uid)).FirstOrDefaultAsync();
+            if (Report != null)
+            {
+                await connection.DeleteAsync(Report);
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+        private void btnResend_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            DataTransferManager.ShowShareUI();
+
+        }
+
+        private void btnDelete_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            deleteReport(idToDelete);
+        }
+
+        private void btnMap_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+
+           
+            if (Frame != null)
+            {
+                // this.Frame.Navigate(typeof(Map));
+                Frame.Navigate(typeof(Map), new Report
+                {
+                    uid = data.uid,
+                    name = data.name,
+                    lat = data.lat.ToString(),
+                    lng = data.lng.ToString(),
+                    message = data.message.ToString(),
+                    photo_id = data.photo_id.ToString(),
+                    organisation_email = data.organisation_email.ToString(),
+                    organisation_phone = data.organisation_phone.ToString(),
+                    date = data.date
+                });
+            }
+        }
     }
 }

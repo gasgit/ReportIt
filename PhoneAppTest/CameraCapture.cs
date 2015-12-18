@@ -30,7 +30,7 @@ namespace PhoneAppTest
         {
             // Create MediaCapture and init
             mediaCapture = new MediaCapture();
-             //mediaCapture.SetPreviewRotation(VideoRotation.Clockwise90Degrees);
+            //mediaCapture.SetPreviewRotation(VideoRotation.Clockwise90Degrees);
 
             var devices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
             await mediaCapture.InitializeAsync(new MediaCaptureInitializationSettings
@@ -58,10 +58,11 @@ namespace PhoneAppTest
         public async Task<StorageFile> CapturePhoto(string desiredName = "warranty.jpg")
         {
             // Create new unique file in the pictures library and capture photo into it
-            var photoStorageFile = await KnownFolders.PicturesLibrary.CreateFileAsync(desiredName, CreationCollisionOption.GenerateUniqueName);
+            //var photoStorageFile = await KnownFolders.PicturesLibrary.CreateFileAsync(desiredName, CreationCollisionOption.GenerateUniqueName);
+            var photoStorageFile = await KnownFolders.CameraRoll.CreateFileAsync(desiredName, CreationCollisionOption.GenerateUniqueName);
 
             //mediaCapture.SetPreviewRotation(VideoRotation.Clockwise90Degrees);
-            
+
 
 
             await mediaCapture.CapturePhotoToStorageFileAsync(imgEncodingProperties, photoStorageFile);

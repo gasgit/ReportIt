@@ -5,6 +5,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
 using Windows.Storage;
 using SQLite;
+using Windows.Graphics.Display;
 
 
 
@@ -19,7 +20,7 @@ namespace PhoneAppTest
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
+        
       
         public MainPage()
         {
@@ -27,40 +28,53 @@ namespace PhoneAppTest
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
             createTable();
-          
+
+
+
+
+            DisplayInformation.AutoRotationPreferences = DisplayOrientations.Portrait;
+
+
+
 
         }
+
+        // check if the table already exists
         public async void tableCheck()
         {
+            // conect to db
             SQLiteAsyncConnection connection = new SQLiteAsyncConnection("ReportIt.db");
 
 
-
+            // try all from sqlite master, if return value 0 create table 
             var result = await connection.QueryAsync<Report>("SELECT name FROM sqlite_master WHERE type='table' AND name='table_name'");
             if (result.Count == 0)
             {
 
                 createTable();
+
             }
 
         }
 
+        // reused the layout for Repoting to use with any organisation
 
 
+        // select council
         private void btnReportCouncil_Click(object sender, RoutedEventArgs e)
         {
 
-
+            // set subject 
             var obj = App.Current as App;
             obj.subject = "Report to Council ";
-
+            // select relevant file to parse
             var objData = App.Current as App;
             objData.datafile = "Data\\councilJSON.txt";
-
+            // set name on combobox to council
             var org = App.Current as App;
             org.orgName = "Select Council";
             
-
+            // navigate to reporting page
             if (Frame != null)
             {
                 this.Frame.Navigate(typeof(Reporting));
@@ -69,16 +83,17 @@ namespace PhoneAppTest
 
         private void btnReportIspca_Click(object sender, RoutedEventArgs e)
         {
+            // set subject to ISPCA
             var obj = App.Current as App;
             obj.subject = "Report to ISPCA \n";
-
+            // select relevent file to parse
             var objData = App.Current as App;
             objData.datafile = "Data\\ispcaJSON.txt";
 
-
+            // set text on combobox to ISPCA
             var org = App.Current as App;
             org.orgName = "Select ISPCA/SPCA";
-
+            // navigate to Reporting
             if (Frame != null)
             {
                 this.Frame.Navigate(typeof(Reporting));
@@ -89,6 +104,11 @@ namespace PhoneAppTest
 
 
         SQLiteAsyncConnection connection = new SQLiteAsyncConnection("ReportIt.db");
+
+
+
+
+        
 
         //public async Task<bool> DoesDbExist(string ReportIt)
         //{
@@ -103,31 +123,14 @@ namespace PhoneAppTest
         //        dbexist = false;
         //    }
 
-
         //    return dbexist;
         //}
-
-        public async Task<bool> DoesDbExist(string ReportIt)
-        {
-            bool dbexist = true;
-            try
-            {
-                StorageFile storageFile = await ApplicationData.Current.LocalFolder.GetFileAsync(ReportIt);
-
-            }
-            catch
-            {
-                dbexist = false;
-            }
-
-            return dbexist;
-        }
 
     
 
        
       
-
+    // table creation in db
     public async void createTable()
         {
             SQLiteAsyncConnection connection = new SQLiteAsyncConnection("ReportIt.db");

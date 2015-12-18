@@ -113,6 +113,103 @@
 "phone": "043-3343300",
 "fax": " 043-3341233",
 "email": "info@longfordcoco.ie"
+},
+{
+
+"name": "Louth County Council",
+"address": "Millenium Centre, Dundalk, Co Louth",
+"phone": " +353 42 933 5457",
+"fax": " +353 42 933 4549",
+"email": " info@louthcoco.ie"
+},
+{
+
+"name": "Mayo County Council",
+"address": "The Mall, Castlebar, Co Mayo",
+"phone": " +353 90 24444",
+"fax": " ",
+"email": "Castlebarao@mayococo.ie "
+},
+{
+
+"name": "Meath  County Council",
+"address": " County Hall, Navan, Co. Meath, Ireland",
+"phone": "+353 46 9097000",
+"fax": " +353 46 9097001",
+"email": " customerservice@meathcoco.ie "
+},
+{
+
+"name": "Monaghan  County Council",
+"address": " County Offices, The Glen, Monaghan. ",
+"phone": "00353 47 30500",
+"fax": " ",
+"email": "info@monaghancoco.ie"
+},
+{
+
+"name": "Offaly County Council",
+"address": "Áras an Chontae, Charleville Road, Tullamore, Co. Offaly",
+"phone": "00353 57 9346800",
+"fax": "00353 57 9346868 ",
+"email": "webmaster@offalycoco.ie"
+},
+{
+
+"name": "Roscommon County Council",
+"address": "Roscommon County Council, Courthouse, Roscommon.",
+"phone": "00353 90 6632500",
+"fax": "00353 90 6637108 ",
+"email": "customerservice@roscommoncoco.ie"
+},
+{
+
+"name": "Sligo County Council",
+"address": "County Hall, Riverside, Sligo, Co. Sligo ",
+"phone": "00353 71 9111111",
+"fax": "00353 71 9141119",
+"email": "info@sligococo.ie"
+},
+{
+
+"name": "South Dublin County Council",
+"address": "County Hall Tallaght, Dublin 24, D24 YNN5",
+"phone": "+353 1 414 9000",
+"fax": "",
+"email": "info@sdublincoco.ie"
+
+},
+{
+
+"name": "Tipperary County Council",
+"address": "Civic Offices, Clonmel, Civic Offices, Nenagh, Co. Tipperary",
+"phone": "+353 761 065000",
+"fax": " ",
+"email": "customerservices@tipperarycoco.ie"
+},
+{
+
+"name": "Westmeath County Council",
+"address": "Westmeath County Council, Áras an Chontae, Mount Street, Mullingar N91 FH4N",
+"phone": "+353 449 332000",
+"fax": "00353 44 9342330 ",
+"email": "info@westmeathcoco.ie"
+},
+{
+
+"name": "Wexford County Council",
+"address": "County Hall, Carricklawn, Wexford, Y35 WY93",
+"phone": "+353 449 332000",
+"fax": " ",
+"email": "postmaster@wexfordcoco.ie "
+},
+{
+
+"name": "Wicklow County Council",
+"address": "County Buildings, Whitegates, Wicklow Town",
+"phone": "+353 40 420100 ",
+"fax": "00353 40 467792 ",
+"email": "cosec@wicklowcoco.ie"
 }
 ]
 

@@ -12,10 +12,7 @@
 
             <StackPanel x:Name="stk" Margin="10,314,10,29" Orientation="Vertical" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
                 <ComboBox x:Name="cmbSelectOrg" PlaceholderText="Select Organisation" Height="62" FontSize="16" Margin="10,0" Foreground="White" FontWeight="Bold" Background="Black" BorderThickness="0.5" BorderBrush="Gray" />
-                <TextBox x:Name="txtMessage" IsTextPredictionEnabled="True" IsSpellCheckEnabled ="True" Margin="10,5,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="66" InputScope="Chat" PlaceholderText="message here"/>
-
-
-                <Button x:ConnectionId='2' x:Name="btnlocation" Content="Test Varialble" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                           Margin="10,0" Height="39" Background="Black" BorderThickness="0" Foreground="Gray"/>
+                <TextBox x:Name="txtMessage" IsTextPredictionEnabled="True" IsSpellCheckEnabled ="True" Margin="10,5,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="104" InputScope="Chat" PlaceholderText="Message here"/>
 
                 <!--  <TextBlock x:Name="txtEmail" TextWrapping="Wrap" Text="" Height="35" Margin="10,-5,10,0" FontSize="16"/> -->
                 <Grid Height="80" Margin="10,20">
@@ -23,10 +20,10 @@
                         <ColumnDefinition Width="118*"/>
                         <ColumnDefinition Width="123*"/>
                     </Grid.ColumnDefinitions>
-                    <Button x:ConnectionId='3' x:Name="btnMap" Content="Map" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-10,7.5,32" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition"                      Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray" />
-                    <Button x:ConnectionId='4' x:Name="btnCamera" Content="Camera" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.294,3.405" Margin="11.5,-10,0,32" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition"                         Grid.Column="1" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
-                    <Button x:ConnectionId='5' x:Name="btnCall" Content="Call" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,34,7.5,-12"                       Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
-                    <Button x:ConnectionId='6' x:Name="btnShare" Content="Share" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11.5,34,0,-12" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition"                        Grid.Column="1" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
+                    <Button x:ConnectionId='2' x:Name="btnMap" Content="Map" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-10,7.5,32" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition"                      Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray" />
+                    <Button x:ConnectionId='3' x:Name="btnCamera" Content="Camera" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.294,3.405" Margin="11.5,-10,0,32" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition"                         Grid.Column="1" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
+                    <Button x:ConnectionId='4' x:Name="btnCall" Content="Call" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,34,7.5,-12"                       Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
+                    <Button x:ConnectionId='5' x:Name="btnShare" Content="Share" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11.333,34,0,-12"                        Grid.Column="1" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
                 </Grid>
 
             </StackPanel>
