@@ -1,1 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Files><file>\Microsoft.ApplicationInsights.dll</file><file>\Microsoft.ApplicationInsights.Extensibility.Windows.dll</file><file>\Microsoft.ApplicationInsights.PersistenceChannel.dll</file><file>\PhoneAppTest.exe</file></Files>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Files>
+  <file>\Microsoft.ApplicationInsights.dll</file>
+  <file>\Microsoft.ApplicationInsights.Extensibility.Windows.dll</file>
+  <file>\Microsoft.ApplicationInsights.PersistenceChannel.dll</file>
+  <file>\ReportIt.exe</file>
+</Files>

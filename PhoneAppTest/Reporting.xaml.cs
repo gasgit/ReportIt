@@ -1,13 +1,21 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Chat;
 using Windows.ApplicationModel.Core;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.ApplicationModel.Email;
 using Windows.Data.Json;
+using Windows.Devices.Enumeration;
 using Windows.Devices.Geolocation;
+using Windows.Media.Capture;
+using Windows.Media.MediaProperties;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
@@ -41,20 +49,16 @@ namespace PhoneAppTest
         public string emailed;
         CoreApplicationView view;
         string ImagePath;
-        Windows.Media.Capture.MediaCapture captureManager;
         public BitmapImage bitmapImage = new BitmapImage();
 
-        // from filepicer 
-        public StorageFile storageFile;
+        // for filepicker 
+        public StorageFile storageFile, storageEmail;
+        
 
         Report sendReportObj = new Report();
 
         public DateTime myDate = DateTime.Now;
         private Geolocator geo;
-
-
-
-
 
         #endregion variable etc at class level
 
@@ -66,8 +70,6 @@ namespace PhoneAppTest
             view = CoreApplication.GetCurrentView();
             // required to save the state if navigated away from
             this.NavigationCacheMode = NavigationCacheMode.Required;
-
-
 
         }
 
@@ -90,9 +92,6 @@ namespace PhoneAppTest
             base.OnNavigatedTo(e);
         }
 
-        
-
-
         protected  override void OnNavigatedFrom(NavigationEventArgs e)
         {
             DataTransferManager.GetForCurrentView().DataRequested += OnShareDataRequested;
@@ -103,19 +102,16 @@ namespace PhoneAppTest
             if (e.NavigationMode == NavigationMode.Back)
                 NavigationCacheMode = NavigationCacheMode.Disabled;
 
-
-           
-
-
-
         }
 
-        private void OnShareDataRequested(DataTransferManager sender, DataRequestedEventArgs args)
+        private  void OnShareDataRequested(DataTransferManager sender, DataRequestedEventArgs args)
         {
+
             // gets the global state for subject declared in App.cs and set in button click mainpage.cs
             var obj = App.Current as App;
             args.Request.Data.Properties.Title = obj.subject;
 
+           
             args.Request.Data.SetText("Date:" + txtDate.Text + "\nLatitude: " + sendReportObj.lat + "\nLongitude: " + sendReportObj.lng + "\nMessage: " + txtMessage.Text +
                 "\nGoogle Maps: " + "http://maps.google.com/maps?q=" + sendReportObj.lat + "+" + sendReportObj.lng + "\n" +
                 "\nOpenStreetMaps: " + "http://www.openstreetmap.org/?mlat=" + sendReportObj.lat + "&mlon=" + sendReportObj.lng + "&zoom=16");
@@ -132,16 +128,100 @@ namespace PhoneAppTest
 
             args.Request.Data.SetBitmap(imageStreamRef);
 
-            
+           
+        }
 
+        //private StorageFile storageFile;
+
+
+
+
+
+
+        private async void email()
+        {
+           
+
+            if (storageFile == null)
+            {
+                MessageDialog message = new MessageDialog("Add photo to message ");
+                await message.ShowAsync();
+                return;
+            }
+            else if (cmbSelectOrg.SelectedIndex < 1)
+            {
+                MessageDialog message = new MessageDialog("Select Organisation ");
+                await message.ShowAsync();
+                return;
+
+            }
+            else if (string.IsNullOrWhiteSpace(txtMessage.Text))
+            {
+                MessageDialog message = new MessageDialog("Enter Message ");
+                await message.ShowAsync();
+                return;
+
+            }
+            else
+            {
+
+                EmailRecipient sendTo = new EmailRecipient()
+                {
+                    Address = sendReportObj.organisation_email
+                };
+
+                //generate mail object
+                EmailMessage mail = new EmailMessage();
+                //add recipients to the mail object
+                mail.To.Add(sendTo);
+                // get subject from app.cs
+                var obj = App.Current as App;
+                mail.Subject = obj.subject;
+                // check storagefile ( declared at class level, can also be used by  datatransfer)
+                // 
+                if (storageFile != null)
+                {
+
+                    imageStreamRef = RandomAccessStreamReference.CreateFromFile(storageFile);
+
+                }
+
+
+                // get name from storagefile properties and save with image as attachment
+                mail.Attachments.Add(new EmailAttachment(storageFile.Name.ToString(), imageStreamRef));
+                // construct mail body 
+                mail.Body = "Date:" + txtDate.Text + "\nLatitude: " + sendReportObj.lat + "\nLongitude: " + sendReportObj.lng + "\nMessage: " + txtMessage.Text +
+                    "\nGoogle Maps: " + "http://maps.google.com/maps?q=" + sendReportObj.lat + "+" + sendReportObj.lng + "\n" +
+                    "\nOpenStreetMaps: " + "http://www.openstreetmap.org/?mlat=" + sendReportObj.lat + "&mlon=" + sendReportObj.lng + "&zoom=16";
+
+
+
+
+
+                await EmailManager.ShowComposeNewEmailAsync(mail);
+
+            }
+
+
+
+            //open the share contract with Mail only and recipent auto filled
+            // add to db
+            addReportDB();
 
         }
 
+
+
         private async void btnShare_Click(object sender, RoutedEventArgs e)
-        {   // check if there is an image added to message as share contract expects it in datatransfer manager
+        {
+            // check if there is an image added to message as share contract expects it in datatransfer manager
             // if null show message dialog and return to app to add image
 
-            displayEmail();
+
+
+            loadObjectDetails();
+
+            //email();
 
 
             if (storageFile == null)
@@ -166,6 +246,9 @@ namespace PhoneAppTest
             }
             else
             {
+
+               
+
                 DataTransferManager.ShowShareUI();
 
             }
@@ -176,11 +259,7 @@ namespace PhoneAppTest
            
         }
 
-        /// <summary>
-        /// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// </summary>
-        /// <returns></returns>
-       
+     
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -220,6 +299,10 @@ namespace PhoneAppTest
 
         // create list of organisations
         List<Organisation> newOrgList = new List<Organisation>();
+        private IStorageFile fl;
+        private RandomAccessStreamReference imageStreamRef;
+
+        //private MediaCapture captureManager;
 
 
         // method to convert JsonArray templist to newList
@@ -276,9 +359,6 @@ namespace PhoneAppTest
 
         public object NavigationService { get; private set; }
 
-       
-
-
         // load combobox with organisation names 
         private void loadListView()
         {   // iterate newOrgList and add to cmbSelectOrg
@@ -299,7 +379,7 @@ namespace PhoneAppTest
 
 
        
-        private void displayEmail()
+        private void loadObjectDetails()
         {
 
           
@@ -335,18 +415,18 @@ namespace PhoneAppTest
 
 
         // testing message box
-        private async void messageBox()
-        {
-            MessageDialog message = new MessageDialog("Date: " + txtDate.Text
-                                                    + "\nOrganisation: " + sendReportObj.name
-                                                    + "\nEmail: " + sendReportObj.organisation_email 
-                                                    + "\nPhone: " + sendReportObj.organisation_phone
-                                                    + "\nLatitude: " + sendReportObj.lat
-                                                    + "\nLongitude: " + sendReportObj.lng
-                                                    + "\nMessage: " + sendReportObj.message
-                                                    + "\nPhoto: " + sendReportObj.photo_id);
-            await message.ShowAsync();
-        }
+        //private async void messageBox()
+        //{
+        //    MessageDialog message = new MessageDialog("Date: " + txtDate.Text
+        //                                            + "\nOrganisation: " + sendReportObj.name
+        //                                            + "\nEmail: " + sendReportObj.organisation_email 
+        //                                            + "\nPhone: " + sendReportObj.organisation_phone
+        //                                            + "\nLatitude: " + sendReportObj.lat
+        //                                            + "\nLongitude: " + sendReportObj.lng
+        //                                            + "\nMessage: " + sendReportObj.message
+        //                                            + "\nPhoto: " + sendReportObj.photo_id);
+        //    await message.ShowAsync();
+        //}
 
         // add report to the db
         public async void addReportDB()
@@ -376,12 +456,38 @@ namespace PhoneAppTest
 
         }
 
-        async Task CapturePhoto()
-        {
+       // private static async Task<DeviceInformation> GetCameraID(Windows.Devices.Enumeration.Panel desiredCamera)
+       // {
+       //     DeviceInformation deviceID = (await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture))
+       //             .FirstOrDefault(x => x.EnclosureLocation != null && x.EnclosureLocation.Panel == desiredCamera);
 
-           // CameraCaptureUI camera = new CameraCaptureUI();
+       //     if (deviceID != null) return deviceID;
+       //     else throw new Exception(string.Format("Camera of type {0} doesn't exist.", desiredCamera));
+       // }
 
-        }
+       //private  async Task CapturePhoto()
+       // {
+
+       //     var cameraID = await GetCameraID(Windows.Devices.Enumeration.Panel.Back);
+       //     captureManager = new MediaCapture();
+
+       //     await captureManager.InitializeAsync(new MediaCaptureInitializationSettings
+       //     {
+       //         StreamingCaptureMode = StreamingCaptureMode.Video,
+       //         PhotoCaptureSource = PhotoCaptureSource.VideoPreview,
+       //         AudioDeviceId = string.Empty,
+       //         VideoDeviceId = cameraID.Id
+       //     });
+       //     // Get resolutions
+       //     var resolutions = captureManager.VideoDeviceController.GetAvailableMediaStreamProperties(MediaStreamType.Photo).Select(x => x as VideoEncodingProperties).ToList();
+       //     // get width and height:
+       //     uint width = resolutions[0].Width;
+       //     uint height = resolutions[0].Height;
+
+
+       //     // CameraCaptureUI camera = new CameraCaptureUI();
+
+       // }
 
         #endregion read json create list of organisations get email etc
 
@@ -400,9 +506,6 @@ namespace PhoneAppTest
                  //   geo.DesiredAccuracyInMeters = 10;
                 geo.DesiredAccuracy = PositionAccuracy.High;
                 
-
-
-
                 // await this because we don't know hpw long it will take to complete and we don't want to block the UI
                 Geoposition pos = await geo.GetGeopositionAsync(); // get the raw geoposition data
                 double lat = pos.Coordinate.Point.Position.Latitude; // current latitude
@@ -419,16 +522,43 @@ namespace PhoneAppTest
                 if ((uint)ex.HResult == 0x80004004)
                 {
                     // the application does not have the right capability or the location master switch is off
-                    MessageDialog msgLocation = new MessageDialog("Location is disabled in phone settings.");
-                    await msgLocation.ShowAsync();
-                    await Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));
-                    
-                    
+                    MessageDialog msgLocation = new MessageDialog("Location disabled, go to phone settings.");
+
+                    msgLocation.Commands.Add(new UICommand("Ok"));
+                    msgLocation.Commands.Add(new UICommand("Cancel"));
+                    var result = await msgLocation.ShowAsync();
+
+                    if(result.Label == "Ok")
+                    {
+                        await Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));
+
+                    }
+                    if(result.Label == "Cancel")
+                    {
+                        // 
+                        MessageDialog msgLocation2 = new MessageDialog("Location not availible!, exit application?");
+                        msgLocation2.Commands.Add(new UICommand("Ok"));
+                        msgLocation2.Commands.Add(new UICommand("Cancel"));
+
+                        var result2 = await msgLocation2.ShowAsync();
+                        if(result2.Label == "Ok")
+                        {
+                            Application.Current.Exit();
+
+                        }
+                        if(result2.Label == "Cancel")
+                        {
+                            await Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));
+
+                        }
+                    }
 
                 }
                 else
                 {
-                    MessageDialog msgLocation = new MessageDialog("location not availible!");
+                    MessageDialog msgLocation = new MessageDialog("Location not availible!, exit application?");
+
+
                     await msgLocation.ShowAsync();
                 }
             }
@@ -440,15 +570,7 @@ namespace PhoneAppTest
         }
 
 
-        // test button open test message dialog
-        private void btnLocation_Click(object sender, RoutedEventArgs e)
-        {
-
-            //displayEmail();
-            //messageBox();
-            locationSettings();
-
-        }
+       
 
         #endregion location
 
@@ -489,11 +611,12 @@ namespace PhoneAppTest
 
             if (args != null)
             {
+                
                 if (args.Files.Count == 0) return;
-
+                
                 view.Activated -= viewActivated;
 
-               // storagefile declared at class level. 
+                // storagefile declared at class level. 
                 storageFile = args.Files[0];
 
 
@@ -512,11 +635,7 @@ namespace PhoneAppTest
         }
 
 
-        //// click event on button to call the file picker method
-        //private void btnAddImage_Click(object sender, RoutedEventArgs e)
-        //{
-        //    filePicker();
-        //}
+       
 
         // myImage has a tapped event that call the filePicker method to select an image 
         private void myImage_Tapped(object sender, TappedRoutedEventArgs e)
@@ -528,23 +647,26 @@ namespace PhoneAppTest
         #endregion filePicker
 
 
-        #region media capture 
+        #region 
 
-       
 
-        private  void btnCamera_Click(object sender, RoutedEventArgs e)
+
+        private void btnCamera_Click(object sender, RoutedEventArgs e)
         {
+            loadObjectDetails();
 
-            if (Frame != null)
-            {
-                this.Frame.Navigate(typeof(CapturePage));
-            }
+            email();
+
+
+          
 
         }
 
         // button to open telephony
         private void btnCall_Click(object sender, RoutedEventArgs e)
         {
+
+            loadObjectDetails();
             try
             {
                 Windows.ApplicationModel.Calls.PhoneCallManager.ShowPhoneCallUI(sendReportObj.organisation_phone, sendReportObj.name);
@@ -559,28 +681,20 @@ namespace PhoneAppTest
 
         #endregion  media capture ???
         // button to open mapview
-        private void btnMap_Click(object sender, RoutedEventArgs e)
+        private  void btnMap_Click(object sender, RoutedEventArgs e)
         {
             if (Frame != null)
             {
                 this.Frame.Navigate(typeof(Map));
             }
+
+            //var message = new ChatMessage();
+            //message.Recipients.Add("mobile-telephone-number");
+            //message.Body = "This is a text message from an app!";
+            //await ChatMessageManager.ShowComposeSmsMessageAsync(message);
         }
     }
 }
 
 
-/*****************    TODO  **************************
 
-    // check for message dialog if location disabled
-    // chech out camera capture code
-    // fix back button 
-    // get map key 
-    // map controls..zoom etc
-    // create new page for single list item, capable to resend 
-    // create delete method timed or physical
-    // check if db exists....
-
-       
-
- *****************    TODO  **************************/

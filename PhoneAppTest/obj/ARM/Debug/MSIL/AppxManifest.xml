@@ -22,10 +22,11 @@
     <Resource Language="EN-US" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="PhoneAppTest.exe" EntryPoint="PhoneAppTest.App">
-      <m3:VisualElements DisplayName="PhoneAppTest" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="PhoneAppTest" ForegroundText="light" BackgroundColor="transparent">
+    <Application Id="App" Executable="ReportIt.exe" EntryPoint="PhoneAppTest.App">
+      <m3:VisualElements DisplayName="Report It" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ReportIt" ForegroundText="light" BackgroundColor="#000000">
         <m3:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>
       <Extensions>
         <Extension Category="windows.fileOpenPicker">
@@ -51,7 +52,7 @@
   <Capabilities>
     <Capability Name="internetClientServer" />
     <Capability Name="picturesLibrary" />
-    <Capability Name="videosLibrary" />
+    <Capability Name="removableStorage" />
     <DeviceCapability Name="location" />
     <DeviceCapability Name="proximity" />
     <DeviceCapability Name="webcam" />

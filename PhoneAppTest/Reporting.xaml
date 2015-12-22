@@ -21,7 +21,7 @@
                         <ColumnDefinition Width="123*"/>
                     </Grid.ColumnDefinitions>
                     <Button x:Name="btnMap" Content="Map" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,-10,7.5,32" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition" Click="btnMap_Click" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray" />
-                    <Button x:Name="btnCamera" Content="Camera" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.294,3.405" Margin="11.5,-10,0,32" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition" Click="btnCamera_Click" Grid.Column="1" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
+                    <Button x:Name="btnCamera" Content="Email" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.294,3.405" Margin="11.5,-10,0,32" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition" Click="btnCamera_Click" Grid.Column="1" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
                     <Button x:Name="btnCall" Content="Call" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,34,7.5,-12" Click="btnCall_Click" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
                     <Button x:Name="btnShare" Content="Share" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11.333,34,0,-12" Click="btnShare_Click" Grid.Column="1" Background="Black" BorderThickness="0.5" Foreground="White" BorderBrush="Gray"/>
                 </Grid>

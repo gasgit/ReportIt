@@ -1,1 +1,1 @@
-C:\Users\Glen\Documents\Visual Studio 2015\Projects\PhoneAppTest\PhoneAppTest\PhoneAppTest.csproj;arm
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\ReportIt.csproj;arm

@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+
     x:Class="PhoneAppTest.Map"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -26,11 +27,19 @@
             <TextBlock Text="MAP VIEW" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
         </StackPanel>
 
-        <Grid  Grid.Row="1" x:Name="ContentRoot">
-            
-            <Maps:MapControl x:Name="myMapCtl"     HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="537" Width="380"/>
+        <Grid  Grid.Row="1" x:Name="ContentRoot" Margin="0,40.167,0,-40">
+            <Slider x:ConnectionId='1' x:Name="mySlider" Maximum="20" Minimum="10"                                      Margin="0,-13,0,13" d:LayoutOverrides="TopPosition, BottomPosition"/>
+            <Maps:MapControl x:Name="MyMap"     HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="507" Width="380"/>
 
         </Grid>
+
+
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" Opacity="0.5">
+            <AppBarButton Label="locate me" Icon="Target"  />
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
 

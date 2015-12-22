@@ -18,8 +18,8 @@
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\PhoneAppTest.exe">
-      <PackagePath>PhoneAppTest.exe</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\ReportIt.exe">
+      <PackagePath>ReportIt.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\packages\Microsoft.ApplicationInsights.1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -49,17 +49,8 @@
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\BadgeLogo.scale-140.png">
-      <PackagePath>Assets\BadgeLogo.scale-140.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\BadgeLogo.scale-240.png">
-      <PackagePath>Assets\BadgeLogo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\pin.png">
       <PackagePath>Assets\pin.png</PackagePath>
@@ -70,17 +61,13 @@
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\SplashScreen.scale-100.png">
-      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\SplashScreen.scale-140.png">
-      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\SplashScreenImage.png">
-      <PackagePath>Assets\SplashScreenImage.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\Square150x150Logo.scale-140.png">
+      <PackagePath>Assets\Square150x150Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\Square44x44Logo.scale-240.png">
       <PackagePath>Assets\Square44x44Logo.scale-240.png</PackagePath>
@@ -90,8 +77,20 @@
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\StoreLogo.scale-140.png">
+      <PackagePath>Assets\StoreLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\WideLogo.scale-140.png">
+      <PackagePath>Assets\WideLogo.scale-140.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\WideLogo.scale-240.png">
@@ -128,14 +127,11 @@
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\PhoneAppTest.xr.xml">
-      <PackagePath>PhoneAppTest.xr.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\ReportIt.xr.xml">
+      <PackagePath>ReportIt.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\CapturePage.xbf">
-      <PackagePath>CapturePage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\Map.xbf">
       <PackagePath>Map.xbf</PackagePath>

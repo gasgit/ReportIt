@@ -1,9 +1,9 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\phoneapptest\phoneapptest\obj\arm\debug\intermediatexaml\phoneapptest.exe" HashGuid="ae32597a-ed17-eff0-263e-df9db9cadb07" />
+    <LocalAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\reportit\phoneapptest\obj\arm\debug\intermediatexaml\reportit.exe" HashGuid="30cfdc78-1e2e-3ca0-1b4a-1e53406cc56c" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
-    <ReferenceAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\phoneapptest\packages\microsoft.applicationinsights.1.0.0\lib\portable-win81+wpa81\microsoft.applicationinsights.dll" HashGuid="e45dab0f-2190-2cce-6391-85c4e409657c" />
-    <ReferenceAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\phoneapptest\packages\microsoft.applicationinsights.windowsapps.1.0.0\lib\wpa81\microsoft.applicationinsights.extensibility.windows.dll" HashGuid="0cfd8f3d-feff-7167-8f6d-52f443177ca5" />
-    <ReferenceAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\phoneapptest\packages\microsoft.applicationinsights.persistencechannel.1.0.0\lib\portable-win81+wpa81\microsoft.applicationinsights.persistencechannel.dll" HashGuid="36d4bf96-0e5e-56a9-1ee8-11c7d3fb4068" />
+    <ReferenceAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\reportit\packages\microsoft.applicationinsights.1.0.0\lib\portable-win81+wpa81\microsoft.applicationinsights.dll" HashGuid="e45dab0f-2190-2cce-6391-85c4e409657c" />
+    <ReferenceAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\reportit\packages\microsoft.applicationinsights.windowsapps.1.0.0\lib\wpa81\microsoft.applicationinsights.extensibility.windows.dll" HashGuid="0cfd8f3d-feff-7167-8f6d-52f443177ca5" />
+    <ReferenceAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\reportit\packages\microsoft.applicationinsights.persistencechannel.1.0.0\lib\portable-win81+wpa81\microsoft.applicationinsights.persistencechannel.dll" HashGuid="36d4bf96-0e5e-56a9-1ee8-11c7d3fb4068" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

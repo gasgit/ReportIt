@@ -37,7 +37,7 @@
 
 
 
-            <ListView DataContext="myRep" x:Name="lvReports"  HorizontalAlignment="Left" Height="482" Margin="10,9,0,0" VerticalAlignment="Top" Width="342" FontSize="16" Tapped="lvReports_Tapped"  Holding="lvReports_Holding" ></ListView>
+            <ListView DataContext="myRep" x:Name="lvReports"  HorizontalAlignment="Left" Height="482" Margin="10,9,0,0" VerticalAlignment="Top" Width="342" FontSize="16" Tapped="lvReports_Tapped"  ></ListView>
 
 
 

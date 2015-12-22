@@ -37,7 +37,7 @@
 
 
 
-            <ListView x:ConnectionId='1' DataContext="myRep" x:Name="lvReports"  HorizontalAlignment="Left" Height="482" Margin="10,9,0,0" VerticalAlignment="Top" Width="342" FontSize="16"                                                        ></ListView>
+            <ListView x:ConnectionId='1' DataContext="myRep" x:Name="lvReports"  HorizontalAlignment="Left" Height="482" Margin="10,9,0,0" VerticalAlignment="Top" Width="342" FontSize="16"                            ></ListView>
 
 
 

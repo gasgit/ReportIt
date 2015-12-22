@@ -116,7 +116,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
       <RootEvent Name="Tapped" />
-      <RootEvent Name="Holding" />
     </RootType>
     <RootType FullName="PhoneAppTest.myReports" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">

@@ -1,0 +1,29 @@
+// check phone numbers + or 00353
+// check file storage area
+// check media capture orientation
+// 
+
+/*****************    TODO  **************************
+
+    // check for message dialog if location disabled
+    // chech out camera capture code
+    // fix back button 
+    // get map key 
+    // map controls..zoom etc
+    // create new page for single list item, capable to resend 
+    // create delete method timed or physical
+    // check if db exists....
+
+
+
+    // capture
+    // background task
+    // fix photo storage
+    // resend photo
+    // new logo
+    // privacy statement
+    // logos
+
+       
+
+ *****************    TODO  **************************/

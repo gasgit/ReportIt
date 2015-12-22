@@ -6,46 +6,47 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    
+
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="665.75">
+    <ScrollViewer Margin="0,0,0,0.167" Grid.RowSpan="2">
 
-    <Grid Background="#FF3C3CF4">
-        <StackPanel HorizontalAlignment="Left" Height="391" Margin="50,111,0,0" VerticalAlignment="Top" Width="300">
+        <Grid Background="Black">
+
+
+
+
+     <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                 <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Margin="13,24,6,0" Height="146"  VerticalAlignment="Top">
+            <TextBlock Text="Report It" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="Report It" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+
+            <StackPanel x:Name="stackPanel"  Height="391"  Width="380" Grid.Row="1"  HorizontalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Margin="10,7,10,71.167">
+            <StackPanel.RenderTransform>
+                <CompositeTransform/>
+            </StackPanel.RenderTransform>
             <Image x:Name="image"  Source="ms-appx:///Images/alert.png" Height="166"/>
-            <Button x:ConnectionId='2' x:Name="btnReportCouncil"  Content="Council" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                Background="#FF3A3A9B" BorderThickness="0" Height="75" FontSize="21.333"/>
-            <Button x:ConnectionId='3' x:Name="btnReportIspca" Content="ISPCA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                              Background="#FF3A3A9B" BorderThickness="0" Height="75" FontSize="21.333"/>
-            <Button x:ConnectionId='4' x:Name="btnMyReports" Content=" Reports" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FF3A3A9B" BorderThickness="0" Height="75" FontSize="21.333"                           />
+            <Button x:ConnectionId='1' x:Name="btnReportCouncil"  Content="Council" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                Background="Black" BorderThickness="0.5" Height="75" FontSize="21.333" BorderBrush="Gray"/>
+            <Button x:ConnectionId='2' x:Name="btnReportIspca" Content="ISPCA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                              Background="Black" BorderThickness="0.5" Height="75" FontSize="21.333" BorderBrush="Gray"/>
+            <Button x:ConnectionId='3' x:Name="btnMyReports" Content=" Reports" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" BorderThickness="0.5" Height="75" FontSize="21.333"                            BorderBrush="Gray"/>
         </StackPanel>
-        <Button x:ConnectionId='1' x:Name="button" Content="Create db" HorizontalAlignment="Left" Margin="105,26,0,0" VerticalAlignment="Top"                     />
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="255,26,0,0" VerticalAlignment="Top" />
-        <!--<StackPanel x:Name="stk" Margin="65,314,75,29" Orientation="Vertical" d:LayoutOverrides="TopPosition, BottomPosition">
-            <Button x:Name="btnlocation" Content="Location" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnLocation_Click" Margin="10,0"/>
-            <ComboBox x:Name="cmbSelectCouncil" PlaceholderText="Select Council" Height="62" BorderBrush="Azure" FontSize="21.333" Tapped="cmbSelectCouncil_Tapped" Margin="10,0" Foreground="White" />
-
-            <TextBlock x:Name="txtEmail" TextWrapping="Wrap" Text="" Height="35" Margin="10,-5,10,0"/>
-            <TextBox x:Name="txtMessage" Margin="10,5,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30"/>
-            <Grid Height="80" Margin="10,20">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="118*"/>
-                    <ColumnDefinition Width="123*"/>
-                </Grid.ColumnDefinitions>
-                <Button x:Name="btnAddImage" Content="Image" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="60" Margin="0,-10,8.5,32" d:LayoutOverrides="Height, TopPosition, BottomPosition" Click="btnAddImage_Click"/>
-                <Button x:Name="btnCamera" Content="Camera" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="87" RenderTransformOrigin="0.294,3.405" Margin="11.5,-10,2,32" d:LayoutOverrides="Height, TopPosition, BottomPosition" Click="btnCamera_Click" Grid.Column="1"/>
-                <Button x:Name="btnCall" Content="Call" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,34,7.5,-12" Click="btnCall_Click"/>
-                <Button x:Name="btnShare" Content="Share" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11.5,34,2,-12" d:LayoutOverrides="Height, LeftPosition, RightPosition, TopPosition, BottomPosition" Click="btnShare_Click" Grid.Column="1"/>
-            </Grid>
-
-        </StackPanel>
-        <StackPanel Height="261" Margin="65,48,75,0" VerticalAlignment="Top" d:LayoutOverrides="LeftPosition, RightPosition">
-            <Grid Height="102" Margin="10,0">
-                <TextBlock x:Name="textBlock" Margin="1,5,19,0" TextWrapping="Wrap" Text="Latitude" VerticalAlignment="Top" Height="20" d:LayoutOverrides="LeftPosition, RightPosition" FontSize="16"/>
-                <TextBox x:Name="txtLat" Margin="0,26,0,42" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
-                <TextBlock x:Name="txtBlockLng" Margin="1,0,19,17" TextWrapping="Wrap" Text="Longitude" VerticalAlignment="Bottom" Height="20" FontSize="16" d:LayoutOverrides="TopMargin, BottomMargin, LeftPosition, RightPosition"/>
-                <TextBox x:Name="txtLng" Margin="0,0,0,-18" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Height="34" d:LayoutOverrides="TopMargin, BottomMargin, LeftPosition, RightPosition"/>
-            </Grid>
-            <Image x:Name="myImage" Height="120" VerticalAlignment="Center" Margin="10,30,10,0"/>
-        </StackPanel>-->
 
 
     </Grid>
+    </ScrollViewer>
+
 </Page>
 

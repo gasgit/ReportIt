@@ -13,13 +13,13 @@ namespace PhoneAppTest
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        private global::ReportIt.ReportIt_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
         public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
         {
             if(_provider == null)
             {
-                _provider = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::ReportIt.ReportIt_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByType(type);
         }
@@ -28,7 +28,7 @@ namespace PhoneAppTest
         {
             if(_provider == null)
             {
-                _provider = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::ReportIt.ReportIt_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByName(fullName);
         }
@@ -40,7 +40,7 @@ namespace PhoneAppTest
     }
 }
 
-namespace PhoneAppTest.ReportIt_XamlTypeInfo
+namespace ReportIt.ReportIt_XamlTypeInfo
 {
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks", "4.0.0.0")]    
@@ -124,35 +124,33 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[13];
-            _typeNameTable[0] = "PhoneAppTest.CapturePage";
+            _typeNameTable = new string[12];
+            _typeNameTable[0] = "PhoneAppTest.Map";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "PhoneAppTest.Common.NavigationHelper";
-            _typeNameTable[4] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[5] = "PhoneAppTest.Common.ObservableDictionary";
-            _typeNameTable[6] = "Object";
-            _typeNameTable[7] = "String";
-            _typeNameTable[8] = "PhoneAppTest.Map";
-            _typeNameTable[9] = "PhoneAppTest.myReports";
-            _typeNameTable[10] = "PhoneAppTest.Reporting";
-            _typeNameTable[11] = "PhoneAppTest.MainPage";
-            _typeNameTable[12] = "PhoneAppTest.SingleReport";
+            _typeNameTable[3] = "PhoneAppTest.myReports";
+            _typeNameTable[4] = "PhoneAppTest.Common.NavigationHelper";
+            _typeNameTable[5] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[6] = "PhoneAppTest.Common.ObservableDictionary";
+            _typeNameTable[7] = "Object";
+            _typeNameTable[8] = "String";
+            _typeNameTable[9] = "PhoneAppTest.Reporting";
+            _typeNameTable[10] = "PhoneAppTest.MainPage";
+            _typeNameTable[11] = "PhoneAppTest.SingleReport";
 
-            _typeTable = new global::System.Type[13];
-            _typeTable[0] = typeof(global::PhoneAppTest.CapturePage);
+            _typeTable = new global::System.Type[12];
+            _typeTable[0] = typeof(global::PhoneAppTest.Map);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::PhoneAppTest.Common.NavigationHelper);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[5] = typeof(global::PhoneAppTest.Common.ObservableDictionary);
-            _typeTable[6] = typeof(global::System.Object);
-            _typeTable[7] = typeof(global::System.String);
-            _typeTable[8] = typeof(global::PhoneAppTest.Map);
-            _typeTable[9] = typeof(global::PhoneAppTest.myReports);
-            _typeTable[10] = typeof(global::PhoneAppTest.Reporting);
-            _typeTable[11] = typeof(global::PhoneAppTest.MainPage);
-            _typeTable[12] = typeof(global::PhoneAppTest.SingleReport);
+            _typeTable[3] = typeof(global::PhoneAppTest.myReports);
+            _typeTable[4] = typeof(global::PhoneAppTest.Common.NavigationHelper);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[6] = typeof(global::PhoneAppTest.Common.ObservableDictionary);
+            _typeTable[7] = typeof(global::System.Object);
+            _typeTable[8] = typeof(global::System.String);
+            _typeTable[9] = typeof(global::PhoneAppTest.Reporting);
+            _typeTable[10] = typeof(global::PhoneAppTest.MainPage);
+            _typeTable[11] = typeof(global::PhoneAppTest.SingleReport);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -187,14 +185,13 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_CapturePage() { return new global::PhoneAppTest.CapturePage(); }
-        private object Activate_5_ObservableDictionary() { return new global::PhoneAppTest.Common.ObservableDictionary(); }
-        private object Activate_8_Map() { return new global::PhoneAppTest.Map(); }
-        private object Activate_9_myReports() { return new global::PhoneAppTest.myReports(); }
-        private object Activate_10_Reporting() { return new global::PhoneAppTest.Reporting(); }
-        private object Activate_11_MainPage() { return new global::PhoneAppTest.MainPage(); }
-        private object Activate_12_SingleReport() { return new global::PhoneAppTest.SingleReport(); }
-        private void MapAdd_5_ObservableDictionary(object instance, object key, object item)
+        private object Activate_0_Map() { return new global::PhoneAppTest.Map(); }
+        private object Activate_3_myReports() { return new global::PhoneAppTest.myReports(); }
+        private object Activate_6_ObservableDictionary() { return new global::PhoneAppTest.Common.ObservableDictionary(); }
+        private object Activate_9_Reporting() { return new global::PhoneAppTest.Reporting(); }
+        private object Activate_10_MainPage() { return new global::PhoneAppTest.MainPage(); }
+        private object Activate_11_SingleReport() { return new global::PhoneAppTest.SingleReport(); }
+        private void MapAdd_6_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -204,92 +201,83 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType userType;
+            global::ReportIt.ReportIt_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
             switch (typeIndex)
             {
 
-            case 0:   //  PhoneAppTest.CapturePage
-                userType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_CapturePage;
-                userType.AddMemberName("NavigationHelper");
-                userType.AddMemberName("DefaultViewModel");
+            case 0:   //  PhoneAppTest.Map
+                userType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_0_Map;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 1:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  PhoneAppTest.Common.NavigationHelper
-                userType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 4:   //  Windows.UI.Xaml.DependencyObject
-                xamlType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 5:   //  PhoneAppTest.Common.ObservableDictionary
-                userType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_5_ObservableDictionary;
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 6:   //  Object
-                xamlType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 7:   //  String
-                xamlType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 8:   //  PhoneAppTest.Map
-                userType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_Map;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 9:   //  PhoneAppTest.myReports
-                userType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_myReports;
+            case 3:   //  PhoneAppTest.myReports
+                userType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_myReports;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  PhoneAppTest.Reporting
-                userType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_Reporting;
+            case 4:   //  PhoneAppTest.Common.NavigationHelper
+                userType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.DependencyObject
+                xamlType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  PhoneAppTest.Common.ObservableDictionary
+                userType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.DictionaryAdd = MapAdd_6_ObservableDictionary;
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Object
+                xamlType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  String
+                xamlType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  PhoneAppTest.Reporting
+                userType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_Reporting;
                 userType.AddMemberName("NavigationService");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  PhoneAppTest.MainPage
-                userType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_MainPage;
+            case 10:   //  PhoneAppTest.MainPage
+                userType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  PhoneAppTest.SingleReport
-                userType = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_SingleReport;
+            case 11:   //  PhoneAppTest.SingleReport
+                userType = new global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_SingleReport;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
@@ -300,37 +288,27 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
         }
 
 
-        private object get_0_CapturePage_NavigationHelper(object instance)
-        {
-            var that = (global::PhoneAppTest.CapturePage)instance;
-            return that.NavigationHelper;
-        }
-        private object get_1_CapturePage_DefaultViewModel(object instance)
-        {
-            var that = (global::PhoneAppTest.CapturePage)instance;
-            return that.DefaultViewModel;
-        }
-        private object get_2_myReports_NavigationHelper(object instance)
+        private object get_0_myReports_NavigationHelper(object instance)
         {
             var that = (global::PhoneAppTest.myReports)instance;
             return that.NavigationHelper;
         }
-        private object get_3_myReports_DefaultViewModel(object instance)
+        private object get_1_myReports_DefaultViewModel(object instance)
         {
             var that = (global::PhoneAppTest.myReports)instance;
             return that.DefaultViewModel;
         }
-        private object get_4_Reporting_NavigationService(object instance)
+        private object get_2_Reporting_NavigationService(object instance)
         {
             var that = (global::PhoneAppTest.Reporting)instance;
             return that.NavigationService;
         }
-        private object get_5_SingleReport_NavigationHelper(object instance)
+        private object get_3_SingleReport_NavigationHelper(object instance)
         {
             var that = (global::PhoneAppTest.SingleReport)instance;
             return that.NavigationHelper;
         }
-        private object get_6_SingleReport_DefaultViewModel(object instance)
+        private object get_4_SingleReport_DefaultViewModel(object instance)
         {
             var that = (global::PhoneAppTest.SingleReport)instance;
             return that.DefaultViewModel;
@@ -338,51 +316,39 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlMember xamlMember = null;
-            global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType userType;
+            global::ReportIt.ReportIt_XamlTypeInfo.XamlMember xamlMember = null;
+            global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
-            case "PhoneAppTest.CapturePage.NavigationHelper":
-                userType = (global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.CapturePage");
-                xamlMember = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlMember(this, "NavigationHelper", "PhoneAppTest.Common.NavigationHelper");
-                xamlMember.Getter = get_0_CapturePage_NavigationHelper;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "PhoneAppTest.CapturePage.DefaultViewModel":
-                userType = (global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.CapturePage");
-                xamlMember = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "PhoneAppTest.Common.ObservableDictionary");
-                xamlMember.Getter = get_1_CapturePage_DefaultViewModel;
-                xamlMember.SetIsReadOnly();
-                break;
             case "PhoneAppTest.myReports.NavigationHelper":
-                userType = (global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.myReports");
-                xamlMember = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlMember(this, "NavigationHelper", "PhoneAppTest.Common.NavigationHelper");
-                xamlMember.Getter = get_2_myReports_NavigationHelper;
+                userType = (global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.myReports");
+                xamlMember = new global::ReportIt.ReportIt_XamlTypeInfo.XamlMember(this, "NavigationHelper", "PhoneAppTest.Common.NavigationHelper");
+                xamlMember.Getter = get_0_myReports_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "PhoneAppTest.myReports.DefaultViewModel":
-                userType = (global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.myReports");
-                xamlMember = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "PhoneAppTest.Common.ObservableDictionary");
-                xamlMember.Getter = get_3_myReports_DefaultViewModel;
+                userType = (global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.myReports");
+                xamlMember = new global::ReportIt.ReportIt_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "PhoneAppTest.Common.ObservableDictionary");
+                xamlMember.Getter = get_1_myReports_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "PhoneAppTest.Reporting.NavigationService":
-                userType = (global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.Reporting");
-                xamlMember = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlMember(this, "NavigationService", "Object");
-                xamlMember.Getter = get_4_Reporting_NavigationService;
+                userType = (global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.Reporting");
+                xamlMember = new global::ReportIt.ReportIt_XamlTypeInfo.XamlMember(this, "NavigationService", "Object");
+                xamlMember.Getter = get_2_Reporting_NavigationService;
                 xamlMember.SetIsReadOnly();
                 break;
             case "PhoneAppTest.SingleReport.NavigationHelper":
-                userType = (global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.SingleReport");
-                xamlMember = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlMember(this, "NavigationHelper", "PhoneAppTest.Common.NavigationHelper");
-                xamlMember.Getter = get_5_SingleReport_NavigationHelper;
+                userType = (global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.SingleReport");
+                xamlMember = new global::ReportIt.ReportIt_XamlTypeInfo.XamlMember(this, "NavigationHelper", "PhoneAppTest.Common.NavigationHelper");
+                xamlMember.Getter = get_3_SingleReport_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "PhoneAppTest.SingleReport.DefaultViewModel":
-                userType = (global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.SingleReport");
-                xamlMember = new global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "PhoneAppTest.Common.ObservableDictionary");
-                xamlMember.Getter = get_6_SingleReport_DefaultViewModel;
+                userType = (global::ReportIt.ReportIt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhoneAppTest.SingleReport");
+                xamlMember = new global::ReportIt.ReportIt_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "PhoneAppTest.Common.ObservableDictionary");
+                xamlMember.Getter = get_4_SingleReport_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }
@@ -441,9 +407,9 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks", "4.0.0.0")]    
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::ReportIt.ReportIt_XamlTypeInfo.XamlSystemBaseType
     {
-        global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::ReportIt.ReportIt_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
@@ -457,7 +423,7 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::ReportIt.ReportIt_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -650,7 +616,7 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::ReportIt.ReportIt_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -659,7 +625,7 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::PhoneAppTest.ReportIt_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::ReportIt.ReportIt_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;
@@ -710,6 +676,5 @@ namespace PhoneAppTest.ReportIt_XamlTypeInfo
         }
     }
 }
-
 
 

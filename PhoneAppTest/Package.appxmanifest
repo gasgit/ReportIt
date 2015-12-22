@@ -16,13 +16,11 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PhoneAppTest.App">
-      <m3:VisualElements DisplayName="Report It" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="PhoneAppTest" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="Report It" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ReportIt" ForegroundText="light" BackgroundColor="#000000">
         <m3:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
-          <m3:ShowNameOnTiles>
-            <m3:ShowOn Tile="square150x150Logo" />
-          </m3:ShowNameOnTiles>
         </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>
       <Extensions>
         <Extension Category="windows.fileOpenPicker">
@@ -50,7 +48,6 @@
     <Capability Name="picturesLibrary" />
     <Capability Name="removableStorage" />
     <DeviceCapability Name="location" />
-    <DeviceCapability Name="proximity" />
     <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>
