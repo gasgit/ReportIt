@@ -109,7 +109,7 @@ namespace PhoneAppTest
 
             sgImage.Source = bitmap;
 
-            this.navigationHelper.OnNavigatedTo(e);
+            navigationHelper.OnNavigatedTo(e);
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -186,7 +186,8 @@ namespace PhoneAppTest
            
             if (Frame != null)
             {
-                // this.Frame.Navigate(typeof(Map));
+
+                // send new object to map page with details
                 Frame.Navigate(typeof(Map), new Report
                 {
                     uid = data.uid,

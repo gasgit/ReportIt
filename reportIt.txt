@@ -1,0 +1,27 @@
+ReportIt
+
+Application to allow users to Report problems, concerns to County Councils and ISPCA.
+Council or ISPCA is selected from main page and details are selected from combobox. ( reused the reporting page layout for both, cahanged out labels etc from App.cs )
+
+Validations are in place to remind user if orgainsation not selected, message not filled out, image no selected.
+Message dialog to let user know that location is not switched on and open settings at location on/off
+
+Users can add images already taken by device through filepicker which also has access to windows phone camera(better featured, flash, autofocusing etc)
+Reports are saved to a sqlite3db on the device once emailed or shared and saved in Reports, where they can view, resend, check on map or delete(App bottom bar)
+
+Application uses gps for reports giving coordinates.
+Maps are used for 2 reasons, 1) The user needs current location to include address, road name in the reports or define which council or ISPCA to contact.
+							 2) The user can look at saved reports and view a reported location on the map.
+							 
+Reports can be shared by email which is auto filled and ready to send, or through other applications using the share contract.
+Once an organisation is selected the user can phone as the number is auto filled to telephony.
+
+
+
+
+
+
+
+
+
+Map Key to be replaced on if downloaded from github: Arc3a4oA - tLOIsI_UL4uHpsrMPJjLA1jU0HisubW - zHv8ZEb4SxFgFv6oBVCOF7q

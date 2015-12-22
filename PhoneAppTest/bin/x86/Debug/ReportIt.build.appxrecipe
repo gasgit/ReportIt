@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>016e92be-f1ea-46f0-94b8-677d0df5535b</PackageIdentityName>
+    <PackageIdentityName>202d1134-3d2b-40fb-b0a2-c7d4788eb30d</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
@@ -33,27 +33,12 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\SQLite.WP81\3.9.1\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\004.jpg">
-      <PackagePath>Assets\004.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\addImage3.png">
-      <PackagePath>Assets\addImage3.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\addPhoto.png">
-      <PackagePath>Assets\addPhoto.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\addPhoto2.png">
-      <PackagePath>Assets\addPhoto2.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\BadgeLogo.scale-100.png">
-      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\BadgeLogo.scale-240.png">
+      <PackagePath>Assets\BadgeLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\pin.png">
-      <PackagePath>Assets\pin.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\pin32.png">
       <PackagePath>Assets\pin32.png</PackagePath>

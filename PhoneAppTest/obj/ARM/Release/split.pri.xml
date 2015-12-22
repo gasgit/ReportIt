@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="9730GAS.ReportIt" version="1.0" primary="true">
+		<Qualifiers>
+			<Scale>240</Scale>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://9730GAS.ReportIt/Files/App.xbf">
+				<Candidate type="Path">
+					<Value>App.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ApplicationInsights.config" uri="ms-resource://9730GAS.ReportIt/Files/ApplicationInsights.config">
+				<Candidate type="Path">
+					<Value>ApplicationInsights.config</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://9730GAS.ReportIt/Files/MainPage.xbf">
+				<Candidate type="Path">
+					<Value>MainPage.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Map.xbf" uri="ms-resource://9730GAS.ReportIt/Files/Map.xbf">
+				<Candidate type="Path">
+					<Value>Map.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MyReports.xbf" uri="ms-resource://9730GAS.ReportIt/Files/MyReports.xbf">
+				<Candidate type="Path">
+					<Value>MyReports.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Reporting.xbf" uri="ms-resource://9730GAS.ReportIt/Files/Reporting.xbf">
+				<Candidate type="Path">
+					<Value>Reporting.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ReportIt.xr.xml" uri="ms-resource://9730GAS.ReportIt/Files/ReportIt.xr.xml">
+				<Candidate type="Path">
+					<Value>ReportIt.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SingleReport.xbf" uri="ms-resource://9730GAS.ReportIt/Files/SingleReport.xbf">
+				<Candidate type="Path">
+					<Value>SingleReport.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="StoreManifest.xml" uri="ms-resource://9730GAS.ReportIt/Files/StoreManifest.xml">
+				<Candidate type="Path">
+					<Value>StoreManifest.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="Logo.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/Logo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\Logo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="pin32.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/pin32.png">
+					<Candidate type="Path">
+						<Value>Assets\pin32.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SmallLogo.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/SmallLogo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\SmallLogo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/Square150x150Logo.png"/>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/Square44x44Logo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square71x71Logo.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/Square71x71Logo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\Square71x71Logo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/StoreLogo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\StoreLogo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="WideLogo.png" uri="ms-resource://9730GAS.ReportIt/Files/Assets/WideLogo.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\WideLogo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Data">
+				<NamedResource name="councilJSON.txt" uri="ms-resource://9730GAS.ReportIt/Files/Data/councilJSON.txt">
+					<Candidate type="Path">
+						<Value>Data\councilJSON.txt</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ispcaJSON.txt" uri="ms-resource://9730GAS.ReportIt/Files/Data/ispcaJSON.txt">
+					<Candidate type="Path">
+						<Value>Data\ispcaJSON.txt</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Images">
+				<NamedResource name="addImage3.png" uri="ms-resource://9730GAS.ReportIt/Files/Images/addImage3.png">
+					<Candidate type="Path">
+						<Value>Images\addImage3.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="addPhoto.png" uri="ms-resource://9730GAS.ReportIt/Files/Images/addPhoto.png">
+					<Candidate type="Path">
+						<Value>Images\addPhoto.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="alert.png" uri="ms-resource://9730GAS.ReportIt/Files/Images/alert.png">
+					<Candidate type="Path">
+						<Value>Images\alert.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Ambox_blue_question.svg" uri="ms-resource://9730GAS.ReportIt/Files/Images/Ambox_blue_question.svg">
+					<Candidate type="Path">
+						<Value>Images\Ambox_blue_question.svg</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Ambox_blue_question.svg.png" uri="ms-resource://9730GAS.ReportIt/Files/Images/Ambox_blue_question.svg.png">
+					<Candidate type="Path">
+						<Value>Images\Ambox_blue_question.svg.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="upload.png" uri="ms-resource://9730GAS.ReportIt/Files/Images/upload.png">
+					<Candidate type="Path">
+						<Value>Images\upload.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="ReportItAppResources">
+			<NamedResource name="Title" uri="ms-resource://9730GAS.ReportIt/ReportItAppResources/Title">
+				<Candidate type="String">
+					<Value>ReportIt</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

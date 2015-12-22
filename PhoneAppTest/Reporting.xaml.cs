@@ -44,9 +44,9 @@ namespace PhoneAppTest
 
 
         //public image file byte array
-        public byte[] fileBytes = null;
+        //public byte[] fileBytes = null;
 
-        public string emailed;
+       // public string emailed;
         CoreApplicationView view;
         string ImagePath;
         public BitmapImage bitmapImage = new BitmapImage();
@@ -140,7 +140,12 @@ namespace PhoneAppTest
 
         private async void email()
         {
-           
+
+            // check if there is an image added to message as share contract expects it in datatransfer manager
+            // if null show message dialog and return to app to add image
+            // check organisation is selected from combobox
+            // check message is entered 
+
 
             if (storageFile == null)
             {
@@ -164,7 +169,7 @@ namespace PhoneAppTest
             }
             else
             {
-
+                // open email message share, email client required to be installed
                 EmailRecipient sendTo = new EmailRecipient()
                 {
                     Address = sendReportObj.organisation_email
@@ -194,17 +199,10 @@ namespace PhoneAppTest
                     "\nGoogle Maps: " + "http://maps.google.com/maps?q=" + sendReportObj.lat + "+" + sendReportObj.lng + "\n" +
                     "\nOpenStreetMaps: " + "http://www.openstreetmap.org/?mlat=" + sendReportObj.lat + "&mlon=" + sendReportObj.lng + "&zoom=16";
 
-
-
-
-
                 await EmailManager.ShowComposeNewEmailAsync(mail);
 
             }
 
-
-
-            //open the share contract with Mail only and recipent auto filled
             // add to db
             addReportDB();
 
@@ -216,12 +214,11 @@ namespace PhoneAppTest
         {
             // check if there is an image added to message as share contract expects it in datatransfer manager
             // if null show message dialog and return to app to add image
-
-
+            // check organisation is selected from combobox
+            // check message is entered 
 
             loadObjectDetails();
 
-            //email();
 
 
             if (storageFile == null)
@@ -247,8 +244,6 @@ namespace PhoneAppTest
             else
             {
 
-               
-
                 DataTransferManager.ShowShareUI();
 
             }
@@ -271,8 +266,7 @@ namespace PhoneAppTest
         #region read json create list of organisations get email etc
 
         // read json file and parse to templist -- async task so doing in background
-        // i need to retrieve list from server maybe so it can be used in different regions and types
-        // i need to create a database to store user reports
+       
 
         private async Task InitialiseListOfOrganisations()
         {
@@ -299,7 +293,7 @@ namespace PhoneAppTest
 
         // create list of organisations
         List<Organisation> newOrgList = new List<Organisation>();
-        private IStorageFile fl;
+        // used by share and email contracts
         private RandomAccessStreamReference imageStreamRef;
 
         //private MediaCapture captureManager;
@@ -367,7 +361,7 @@ namespace PhoneAppTest
                 // get name from the item object
                 cmbSelectOrg.Items.Add(item.name);
 
-
+                // het selected text for button
                 var orgObj = App.Current as App;
                 cmbSelectOrg.PlaceholderText = orgObj.orgName;
 
@@ -378,7 +372,7 @@ namespace PhoneAppTest
 
 
 
-       
+       // get details for object from json and input from reporting page
         private void loadObjectDetails()
         {
 
@@ -414,29 +408,16 @@ namespace PhoneAppTest
 
 
 
-        // testing message box
-        //private async void messageBox()
-        //{
-        //    MessageDialog message = new MessageDialog("Date: " + txtDate.Text
-        //                                            + "\nOrganisation: " + sendReportObj.name
-        //                                            + "\nEmail: " + sendReportObj.organisation_email 
-        //                                            + "\nPhone: " + sendReportObj.organisation_phone
-        //                                            + "\nLatitude: " + sendReportObj.lat
-        //                                            + "\nLongitude: " + sendReportObj.lng
-        //                                            + "\nMessage: " + sendReportObj.message
-        //                                            + "\nPhoto: " + sendReportObj.photo_id);
-        //    await message.ShowAsync();
-        //}
-
         // add report to the db
         public async void addReportDB()
         {
+            // set date on object
             sendReportObj.date = txtDate.Text;
 
 
             // connection string to db
             SQLiteAsyncConnection connection = new SQLiteAsyncConnection("ReportIt.db");
-
+            // populate new report object for db incert
             var Report = new Report()
             {
                 name = sendReportObj.name,
@@ -456,38 +437,6 @@ namespace PhoneAppTest
 
         }
 
-       // private static async Task<DeviceInformation> GetCameraID(Windows.Devices.Enumeration.Panel desiredCamera)
-       // {
-       //     DeviceInformation deviceID = (await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture))
-       //             .FirstOrDefault(x => x.EnclosureLocation != null && x.EnclosureLocation.Panel == desiredCamera);
-
-       //     if (deviceID != null) return deviceID;
-       //     else throw new Exception(string.Format("Camera of type {0} doesn't exist.", desiredCamera));
-       // }
-
-       //private  async Task CapturePhoto()
-       // {
-
-       //     var cameraID = await GetCameraID(Windows.Devices.Enumeration.Panel.Back);
-       //     captureManager = new MediaCapture();
-
-       //     await captureManager.InitializeAsync(new MediaCaptureInitializationSettings
-       //     {
-       //         StreamingCaptureMode = StreamingCaptureMode.Video,
-       //         PhotoCaptureSource = PhotoCaptureSource.VideoPreview,
-       //         AudioDeviceId = string.Empty,
-       //         VideoDeviceId = cameraID.Id
-       //     });
-       //     // Get resolutions
-       //     var resolutions = captureManager.VideoDeviceController.GetAvailableMediaStreamProperties(MediaStreamType.Photo).Select(x => x as VideoEncodingProperties).ToList();
-       //     // get width and height:
-       //     uint width = resolutions[0].Width;
-       //     uint height = resolutions[0].Height;
-
-
-       //     // CameraCaptureUI camera = new CameraCaptureUI();
-
-       // }
 
         #endregion read json create list of organisations get email etc
 
@@ -523,13 +472,14 @@ namespace PhoneAppTest
                 {
                     // the application does not have the right capability or the location master switch is off
                     MessageDialog msgLocation = new MessageDialog("Location disabled, go to phone settings.");
-
+                    // choice to go to settings
                     msgLocation.Commands.Add(new UICommand("Ok"));
                     msgLocation.Commands.Add(new UICommand("Cancel"));
                     var result = await msgLocation.ShowAsync();
 
                     if(result.Label == "Ok")
                     {
+                        // open location system settings
                         await Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));
 
                     }
@@ -556,14 +506,14 @@ namespace PhoneAppTest
                 }
                 else
                 {
+
+                    // message if location not availible, down in a hole or something!!
                     MessageDialog msgLocation = new MessageDialog("Location not availible!, exit application?");
-
-
                     await msgLocation.ShowAsync();
                 }
             }
         }
-
+        // open location settings in the system to switch on off
         private async void locationSettings()
         {
            await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings"));
@@ -597,13 +547,13 @@ namespace PhoneAppTest
             filePicker.FileTypeFilter.Add(".png");
             filePicker.FileTypeFilter.Add(".jpeg");
             filePicker.FileTypeFilter.Add(".jpg");
-
             filePicker.PickSingleFileAndContinue();
+            // create system filepicker view
             view.Activated += viewActivated;
 
         }
 
-      
+      // activate system filepicker view
         private async void viewActivated(CoreApplicationView sender, IActivatedEventArgs args1)
         {
 
@@ -619,16 +569,14 @@ namespace PhoneAppTest
                 // storagefile declared at class level. 
                 storageFile = args.Files[0];
 
-
                 // get storagefile path for object
                 ImagePath = storageFile.Path;
-
+                // create stream 
                 var stream = await storageFile.OpenAsync(FileAccessMode.Read);
-
-
+                // create bitmap image
                 await bitmapImage.SetSourceAsync(stream);
-
                 var decoder = await Windows.Graphics.Imaging.BitmapDecoder.CreateAsync(stream);
+                // set bitmap to imageview
                 myImage.Source = bitmapImage;
 
             }
@@ -656,8 +604,6 @@ namespace PhoneAppTest
             loadObjectDetails();
 
             email();
-
-
           
 
         }
@@ -688,10 +634,6 @@ namespace PhoneAppTest
                 this.Frame.Navigate(typeof(Map));
             }
 
-            //var message = new ChatMessage();
-            //message.Recipients.Add("mobile-telephone-number");
-            //message.Body = "This is a text message from an app!";
-            //await ChatMessageManager.ShowComposeSmsMessageAsync(message);
         }
     }
 }

@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\reportit\phoneapptest\obj\x86\debug\intermediatexaml\reportit.exe" HashGuid="fbd1b4cd-3d5c-c720-4a80-0c46092937a0" />
+    <LocalAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\reportit\phoneapptest\obj\x86\debug\intermediatexaml\reportit.exe" HashGuid="e92576d4-85dc-4d22-c286-17a89317860d" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
     <ReferenceAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\reportit\packages\microsoft.applicationinsights.1.0.0\lib\portable-win81+wpa81\microsoft.applicationinsights.dll" HashGuid="e45dab0f-2190-2cce-6391-85c4e409657c" />
     <ReferenceAssembly PathName="c:\users\glen\documents\visual studio 2015\projects\reportit\packages\microsoft.applicationinsights.windowsapps.1.0.0\lib\wpa81\microsoft.applicationinsights.extensibility.windows.dll" HashGuid="0cfd8f3d-feff-7167-8f6d-52f443177ca5" />

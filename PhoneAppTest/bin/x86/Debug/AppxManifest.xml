@@ -7,11 +7,11 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="016e92be-f1ea-46f0-94b8-677d0df5535b" Publisher="CN=Glen" Version="1.0.0.0" ProcessorArchitecture="x86" />
-  <mp:PhoneIdentity PhoneProductId="016e92be-f1ea-46f0-94b8-677d0df5535b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="9730GAS.ReportIt" Publisher="CN=01923EAC-27AA-45D8-919A-105EA95032B8" Version="1.1.0.15" ProcessorArchitecture="x86" />
+  <mp:PhoneIdentity PhoneProductId="202d1134-3d2b-40fb-b0a2-c7d4788eb30d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>PhoneAppTest</DisplayName>
-    <PublisherDisplayName>Glen</PublisherDisplayName>
+    <DisplayName>ReportIt</DisplayName>
+    <PublisherDisplayName>GAS</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -23,7 +23,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="ReportIt.exe" EntryPoint="PhoneAppTest.App">
-      <m3:VisualElements DisplayName="Report It" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ReportIt" ForegroundText="light" BackgroundColor="#000000">
+      <m3:VisualElements DisplayName="Report It" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ReportIt" ForegroundText="light" BackgroundColor="black">
         <m3:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
