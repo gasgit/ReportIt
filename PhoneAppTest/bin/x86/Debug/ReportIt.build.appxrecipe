@@ -33,8 +33,8 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\SQLite.WP81\3.9.1\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\BadgeLogo.scale-240.png">
-      <PackagePath>Assets\BadgeLogo.scale-240.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\Assets\Logo.scale-240.png">
@@ -118,11 +118,17 @@
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\About.xbf">
+      <PackagePath>About.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\Map.xbf">
       <PackagePath>Map.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\MyReports.xbf">
       <PackagePath>MyReports.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\Privacy.xbf">
+      <PackagePath>Privacy.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\Reporting.xbf">
       <PackagePath>Reporting.xbf</PackagePath>

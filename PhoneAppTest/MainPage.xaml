@@ -48,4 +48,14 @@
     </Grid>
     </ScrollViewer>
 
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" Opacity="0.5">
+            <AppBarButton x:Name="btnAbout" Label="About" Icon="Target" Click="btnAbout_Click"  />
+
+
+            <AppBarButton x:Name="btnPrivacy" Label="Privacy" Icon="Target" Click="btnPrivacy_Click"   />
+
+        </CommandBar>
+    </Page.BottomAppBar>
+
 </Page>

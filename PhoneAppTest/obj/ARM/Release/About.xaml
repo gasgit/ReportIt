@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="ReportIt.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReportIt"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Report It" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="About" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <StackPanel HorizontalAlignment="Left" Height="100" Margin="350,164,-88,0" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:Name="txrAbout" HorizontalAlignment="Left" Margin="5,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="293" RenderTransformOrigin="0.5,0.5" Width="357" 
+                       Text="ReportIt application was developed to allow users to send reports to the local County Councils or ISPACA's with any concerns 
+they have.The application easily enables users to send reports with locations, images and messages to help the orginisations to respond. " FontSize="18">
+               
+            </TextBlock>
+
+        </Grid>
+    </Grid>
+</Page>
+

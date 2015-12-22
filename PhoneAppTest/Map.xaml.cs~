@@ -46,7 +46,7 @@ namespace PhoneAppTest
             // passing values from singleReport
             dataFromSingleReport = e.Parameter as Report;
 
-            MyMap.MapServiceToken = "Arc3a4oA - tLOIsI_UL4uHpsrMPJjLA1jU0HisubW - zHv8ZEb4SxFgFv6oBVCOF7q";
+            MyMap.MapServiceToken = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
             geolocator = new Geolocator();
             geolocator.DesiredAccuracyInMeters = 50;

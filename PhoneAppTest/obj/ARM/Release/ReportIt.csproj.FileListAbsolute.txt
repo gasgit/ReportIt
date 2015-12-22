@@ -58,3 +58,13 @@ C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\AR
 C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\ProjectArchitectures.txt
 C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\ReportIt.csprojResolveAssemblyReference.cache
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\ARM\Release\About.xbf
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\ARM\Release\Privacy.xbf
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\About.g.i.cs
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\About.g.cs
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\Privacy.g.i.cs
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\Privacy.g.cs
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\About.xaml
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\Privacy.xaml
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\About.xbf
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\ARM\Release\Privacy.xbf

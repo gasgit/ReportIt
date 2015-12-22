@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="ReportIt.Privacy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReportIt"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Report It" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="Privacy Policy" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <TextBlock x:Name="txtPrivacy" HorizontalAlignment="Left" Margin="2,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="449" RenderTransformOrigin="0.5,0.5" Width="350" 
+Text="ReportIt Application uses Location to create reports using the device location 
+which is shared to the organisation the user wishes to contact while making a report. ReportIt appliction will store 
+the locations onto the device for user records only that can be easily deleted. No user information is stored by the developer.
+Any information shared by email is between user and organisation.
+User email address is sent with report to facilitate a responce. "  FontSize="18">
+               
+            </TextBlock>
+
+        </Grid>
+    </Grid>
+</Page>
+

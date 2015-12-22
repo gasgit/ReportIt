@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="9730GAS.ReportIt" Publisher="CN=01923EAC-27AA-45D8-919A-105EA95032B8" Version="1.1.0.17" ProcessorArchitecture="arm" />
+  <Identity Name="9730GAS.ReportIt" Publisher="CN=01923EAC-27AA-45D8-919A-105EA95032B8" Version="1.1.0.20" ProcessorArchitecture="arm" />
   <mp:PhoneIdentity PhoneProductId="202d1134-3d2b-40fb-b0a2-c7d4788eb30d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>ReportIt</DisplayName>

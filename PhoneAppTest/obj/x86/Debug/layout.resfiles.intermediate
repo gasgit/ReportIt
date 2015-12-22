@@ -1,5 +1,5 @@
 ApplicationInsights.config
-Assets\BadgeLogo.scale-240.png
+Assets\BadgeLogo.scale-100.png
 Assets\Logo.scale-240.png
 Assets\pin32.png
 Assets\SmallLogo.scale-240.png
@@ -12,10 +12,12 @@ Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-100.png
 Assets\WideLogo.scale-140.png
 Assets\WideLogo.scale-240.png
+About.xbf
 App.xbf
 MainPage.xbf
 Map.xbf
 MyReports.xbf
+Privacy.xbf
 Reporting.xbf
 ReportIt.xr.xml
 SingleReport.xbf

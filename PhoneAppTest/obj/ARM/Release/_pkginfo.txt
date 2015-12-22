@@ -1,1 +1,1 @@
-C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\AppPackages\ReportIt_1.1.0.17_ARM_Test\ReportIt_1.1.0.17_ARM.appx
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\AppPackages\ReportIt_1.1.0.20_ARM_Test\ReportIt_1.1.0.20_ARM.appx

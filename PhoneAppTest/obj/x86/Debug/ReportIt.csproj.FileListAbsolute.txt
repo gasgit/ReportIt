@@ -122,3 +122,13 @@ C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x8
 C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\Privacy.g.i.cs
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\Privacy.g.cs
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\Privacy.xbf
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\Privacy.xaml
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\Privacy.xbf
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\About.g.i.cs
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\About.g.cs
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\bin\x86\Debug\About.xbf
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\About.xaml
+C:\Users\Glen\Documents\Visual Studio 2015\Projects\ReportIt\PhoneAppTest\obj\x86\Debug\About.xbf

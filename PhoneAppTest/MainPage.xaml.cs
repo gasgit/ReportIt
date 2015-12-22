@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using SQLite;
 using Windows.Graphics.Display;
+using ReportIt;
 
 
 
@@ -152,6 +153,25 @@ namespace PhoneAppTest
             if (Frame != null)
             {
                 this.Frame.Navigate(typeof(myReports));
+            }
+
+        }
+
+        private void btnPrivacy_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (Frame != null)
+            {
+                this.Frame.Navigate(typeof(Privacy));
+            }
+
+        }
+
+        private void btnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            if (Frame != null)
+            {
+                this.Frame.Navigate(typeof(About));
             }
 
         }
